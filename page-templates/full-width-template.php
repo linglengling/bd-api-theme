@@ -371,7 +371,7 @@ if (get_query_var('leagueId') != "") {
 </div>
 
 </div>
-<?php include 'standing.php'; ?>
+<?php //include 'standing.php'; ?>
                 </div>
             </div>
         </div>
