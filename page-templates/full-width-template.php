@@ -328,10 +328,10 @@ if (get_query_var('leagueId') != "") {
         include 'standingMain.php';
     } else {
         ?>
-                            <?php include 'allFixtures.php'; ?>
-                            <?php include 'todayLeagueGames.php'; ?>
-                            <?php include 'upcomingFixtures.php'; ?>
-                            <?php include 'previousResults.php'; ?>
+                            <?php //include 'allFixtures.php'; ?>
+                            <?php //include 'todayLeagueGames.php'; ?>
+                            <?php //include 'upcomingFixtures.php'; ?>
+                            <?php //include 'previousResults.php'; ?>
                             <?php //include 'seasonFixtures.php'; ?> 
 
 
