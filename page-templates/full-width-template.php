@@ -348,7 +348,7 @@ if (get_query_var('leagueId') != "") {
                             <iframe class="statiframe" src="https://livescore.5score.com/statistics3/index.jsp?partner=5scorestats&lang=<?php echo $lang; ?>" width="100%" id="livescoreFrame" frameborder="0" scrolling="no" style="height: 1000px;"></iframe>
                             <?php
                         } else {
-                            include 'todayGames.php';
+                           // include 'todayGames.php';
                         }
                         ?>
                         <?php
