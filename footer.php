@@ -35,7 +35,7 @@
         
         var favLeagues = getCookie("MY_LEAGUES");
         var favLeagueIds = [];
-        favLeaguesArray = favLeagues.split(",");
+        favLeaguesArray = (favLeagues || '').split(",");
         //console.log(favLeaguesArray);
         sportsId=jQuery('.all-scores-container').data('sportid');
         
@@ -66,6 +66,9 @@
 let  loadGamesInterval = window.setInterval(loadGames, 60000);
         var todayDate = today;
         jQuery("#todaygamespicker").val(todayDate);
+
+        if (typeof pickadate !== "undefined") { 
+
         jQuery('.datepicker').pickadate({
             onClose: function (selectedDate) {
                 if (todayDate != jQuery("#todaygamespicker").val()) {
@@ -89,6 +92,8 @@ let  loadGamesInterval = window.setInterval(loadGames, 60000);
             editable: false,
             clear: ''
         });
+
+    }
         
         jQuery('.switch-button_toggle').on('click', function () {
             if( jQuery('.switch-button_toggle').hasClass("switch-button_active_toggle")){
