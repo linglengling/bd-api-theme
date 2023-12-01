@@ -143,7 +143,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 <!--					<div class="small-info-text"><?php echo $text;?><?php spacious_header_info_text(); ?></div>-->
                                                                         <div class="small-info-text">
                                     <div class="main-header-module-settings-tooltip" aria-expanded="false">
-                                        <?php echo do_shortcode('[gtranslate]'); ?>
+                                        <?php // echo do_shortcode('[gtranslate]'); ?>
 <!--   <button class="main-header-module-settings-button">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
          <g fill="#ffffff" fill-rule="nonzero">
