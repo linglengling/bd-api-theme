@@ -3597,3 +3597,49 @@ li.default-menu {
 		text-align: center;
 	}
 }
+
+
+
+
+.wgl-icon a{
+	position:relative;
+	padding-left: 23px !important;
+}
+.wgl-icon a:before{
+	content: '';
+    position: absolute;
+    
+    background-size: contain;
+    width: 17px;
+    height: 17px;
+    left: 0;
+}
+.wgl-icon.icon-football a:before{
+	background-image: url(img/SVG/football.svg);
+}
+.wgl-icon.icon-icehockey a:before{
+	background-image: url(img/SVG/ice-hockey.svg);
+}
+.wgl-icon.icon-tennis a:before{
+	background-image: url(img/SVG/tennis.svg);
+}
+.wgl-icon.icon-basketball a:before{
+	background-image: url(img/SVG/basketball.svg);
+}
+.wgl-icon.icon-handball a:before{
+	background-image: url(img/SVG/handball.svg);
+}
+.wgl-icon.icon-floorball a:before{
+	background-image: url(img/SVG/football.svg);
+}
+
+@media (max-width: 767px) {
+	.wgl-icon a{
+		padding-left:0 !important;
+		padding-top:10px !important;
+	}
+	.wgl-icon a:before{
+		left:auto;
+		top:0;
+	}
+}
