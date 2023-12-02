@@ -76,6 +76,7 @@ $urlAwayTeamName=str_replace(',', ' ', $urlAwayTeamName);
 		<script type='text/javascript' src='/wp-content/themes/spacious/js/custom.js?ver=5.9.1' id='mycustom-js'></script>
          <link rel="stylesheet" href="/wp-content/themes/spacious/css/date/classic.css" />
     <link rel="stylesheet" href="/wp-content/themes/spacious/css/date/classic.date.css" />  
+	<link rel="stylesheet" href="/wp-content/themes/spacious/custom-theme.css?ver=1" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW39TX25TH"></script>
