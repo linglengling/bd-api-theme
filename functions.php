@@ -27,6 +27,46 @@ if ( isset( $wp_template_css[$css[1]] ) )
  * Set the content width based on the theme's design and stylesheet.
  */
 
+
+add_filter('acf/settings/path', 'my_acf_settings_path');
+
+function my_acf_settings_path($path)
+{
+
+    $path = get_stylesheet_directory() . '/inc/acf/';
+
+    return $path;
+}
+
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+
+function my_acf_settings_dir($dir)
+{
+
+
+    $dir = get_stylesheet_directory_uri() . '/inc/acf/';
+
+    return $dir;
+}
+
+//add_filter('acf/settings/show_admin', '__return_false');
+include_once(get_stylesheet_directory() . '/inc/acf/acf.php');
+//add_filter('acf/settings/show_admin', '__return_false');
+
+
+acf_add_options_page('Cấu Hình Web');
+
+//        acf_add_options_page('Cấu Hình Web2');
+//   acf_add_options_sub_page('Quảng Cáo');
+
+function remove_acf_menu()
+{
+    remove_menu_page('edit.php?post_type=acf');
+}
+
+add_action( 'admin_menu', 'remove_acf_menu', 999);
+
+
 if ( ! isset( $content_width ) ) {
 	$content_width = 750;
 }
