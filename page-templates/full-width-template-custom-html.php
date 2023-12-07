@@ -229,13 +229,27 @@ if (str_contains($favLeagues, '_'.$sportId)) {
 ?>
                  <style>
                     .callendarDays {    padding: 0.5rem 0.25rem !important;}
-                    .main-left {  width: 69%;}
+                    .main-left {  width: 69%;position:relative;}
                     @media (max-width: 600px){
                         .main-left {width: 99%;}
                     }
+                    
+                        .widget-container a {
+                            display:none !important;
+                        }
+                    .widget-container--live-score {min-height:800px;}
+                    
                 </style>
                 
                 <div class="main-left" style="  ">
+                    <div class="24hscore-ads" style="
+                            width: 100%;
+                            height: 50px;
+                            background: #666666;
+                            position: absolute;
+                            background-image: url(https://24hscore.com/wp-content/uploads/2023/12/1xbet-banner.jpg);
+                            background-size: contain;
+                        "></div>
                      <?php echo get_field('custom-html-main', get_the_ID()) ?>
                 </div>
 
