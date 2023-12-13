@@ -552,19 +552,20 @@ add_action('admin_head', 'wpse_52099_script_enqueuer');
 
 function wpse_52099_script_enqueuer() {
 
+  
 
+echo <<<HTML
+<style type="text/css">
+#menu-posts-anwp_match , #menu-posts-anwp_club , #menu-posts-anwp_referee,
+#menu-posts-anwp_competition, #menu-posts-anwp_player, #menu-posts-anwp_staff , #toplevel_page_anwp-football-leagues 
+, #toplevel_page_anwp-settings-tools , #wp-not-current-submenu menu-top, #toplevel_page_anwp-football-leagues-setting {
+    display:none;
+}
+</style>
 
-	echo <<<HTML
-	<style type="text/css">
-	#menu-posts-anwp_match , #menu-posts-anwp_club , #menu-posts-anwp_referee,
-	#menu-posts-anwp_competition, #menu-posts-anwp_player, #menu-posts-anwp_staff {
-		display:none;
-	}
-	</style>
+HTML;
 
-	HTML;
-
-
+    
 }
 
 
