@@ -320,7 +320,7 @@ foreach ($favLeaguesArray as $favLeagues) {
 
 
                     <div class="rightcontent bg-white">
-                        <?php echo do_shortcode('[anwpfl-standing title="" id="468" exclude_ids="" layout="" partial="" bottom_link="" link_text="" show_notes="1"]'); ?>
+                        <?php // echo do_shortcode('[anwpfl-standing title="" id="468" exclude_ids="" layout="" partial="" bottom_link="" link_text="" show_notes="1"]'); ?>
                     </div><!-- End Class rightcontent -->   
 
 
