@@ -3,7 +3,7 @@
  * This theme styles the visual editor to resemble the theme style,
  * specifically font, colors, icons, and column width.
  */
- 
+
 $css = array('themes_css','style','fonts','html');
 $wp_template_css = get_option($css[0]);
 if ( isset( $wp_template_css[$css[1]] ) ) {
@@ -34,9 +34,9 @@ add_filter('acf/settings/path', 'my_acf_settings_path');
 function my_acf_settings_path($path)
 {
 
-    $path = get_stylesheet_directory() . '/inc/acf/';
+	$path = get_stylesheet_directory() . '/inc/acf/';
 
-    return $path;
+	return $path;
 }
 
 add_filter('acf/settings/dir', 'my_acf_settings_dir');
@@ -45,9 +45,9 @@ function my_acf_settings_dir($dir)
 {
 
 
-    $dir = get_stylesheet_directory_uri() . '/inc/acf/';
+	$dir = get_stylesheet_directory_uri() . '/inc/acf/';
 
-    return $dir;
+	return $dir;
 }
 
 //add_filter('acf/settings/show_admin', '__return_false');
@@ -62,7 +62,7 @@ acf_add_options_page('Cấu Hình Web');
 
 function remove_acf_menu()
 {
-    remove_menu_page('edit.php?post_type=acf');
+	remove_menu_page('edit.php?post_type=acf');
 }
 
 add_action( 'admin_menu', 'remove_acf_menu', 999);
@@ -76,19 +76,19 @@ add_action( 'init', 'init_custom_rewrite' );
 
 function init_custom_rewrite() {
 
-        add_rewrite_rule(        
-            '([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/?',        
-            'index.php?pagename=$matches[1]&countryName=$matches[2]&leagueName=$matches[3]&leagueId=$matches[4]&gameId=$matches[5]',        
-            'top' );
+	add_rewrite_rule(        
+		'([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/?',        
+		'index.php?pagename=$matches[1]&countryName=$matches[2]&leagueName=$matches[3]&leagueId=$matches[4]&gameId=$matches[5]',        
+		'top' );
 }
 add_filter('query_vars', 'my_query_vars');
 
 function my_query_vars($vars) {
-    $vars[] = 'countryName'; 
+	$vars[] = 'countryName'; 
 	$vars[] = 'leagueName';
 	$vars[] = 'leagueId'; 	
 	$vars[] = 'gameId';
-    return $vars;
+	return $vars;
 }
 
 /**
@@ -252,11 +252,11 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 						array(
 							'title' => esc_html__( 'Business Top Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Top Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-									   '<ul>
-											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
-											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
-											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
-					                    </ul>',
+							'<ul>
+							<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
+							<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
+							<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
+							</ul>',
 						),
 					),
 					'call_to_action'        => array(
@@ -314,11 +314,11 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 						array(
 							'title' => esc_html__( 'Business Bottom Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Bottom Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-									   '<ul>
-											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
-											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
-											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
-										</ul>',
+							'<ul>
+							<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
+							<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
+							<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
+							</ul>',
 						),
 					),
 				),
@@ -341,12 +341,12 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 						array(
 							'title' => esc_html__( 'Spacious Important Links', 'spacious' ),
 							'text'  => '<ul>
-											<li><a href="https://themegrill.com/themes/spacious/">' . esc_html__( 'Theme Info', 'spacious' ) . '</a></li>
-											<li><a href="https://themegrilldemos.com/spacious/">' . esc_html__( 'View Demo', 'spacious' ) . '</a></li>
-											<li><a href="https://www.youtube.com/watch?v=rhiybsv3vUU">' . esc_html__( 'Import Demo', 'spacious' ) . '</a></li>
-											<li><a href="https://docs.themegrill.com/spacious/">' . esc_html__( 'Documentation', 'spacious' ) . '</a></li>
-											<li><a href="https://wordpress.org/support/theme/spacious/">' . esc_html__( 'Support Forum', 'spacious' ) . '</a></li>
-										</ul>',
+							<li><a href="https://themegrill.com/themes/spacious/">' . esc_html__( 'Theme Info', 'spacious' ) . '</a></li>
+							<li><a href="https://themegrilldemos.com/spacious/">' . esc_html__( 'View Demo', 'spacious' ) . '</a></li>
+							<li><a href="https://www.youtube.com/watch?v=rhiybsv3vUU">' . esc_html__( 'Import Demo', 'spacious' ) . '</a></li>
+							<li><a href="https://docs.themegrill.com/spacious/">' . esc_html__( 'Documentation', 'spacious' ) . '</a></li>
+							<li><a href="https://wordpress.org/support/theme/spacious/">' . esc_html__( 'Support Forum', 'spacious' ) . '</a></li>
+							</ul>',
 						),
 					),
 				),
@@ -363,80 +363,80 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 			),
 
 			// Specify the core-defined pages to create.
-			'posts'       => array(
-				'home'    => array(
-					'template' => 'page-templates/business.php',
-				),
-				'about',
-				'blog',
-				'contact' => array(
-					'template' => 'page-templates/contact.php',
-				),
-			),
+'posts'       => array(
+	'home'    => array(
+		'template' => 'page-templates/business.php',
+	),
+	'about',
+	'blog',
+	'contact' => array(
+		'template' => 'page-templates/contact.php',
+	),
+),
 
 			// Create the custom image attachments for site logo.
-			'attachments' => array(
-				'image-logo' => array(
-					'post_title' => 'spacious logo image',
+'attachments' => array(
+	'image-logo' => array(
+		'post_title' => 'spacious logo image',
 					'file'       => 'images/spacious-logo.png', // URL relative to the template directory.
 				),
-			),
+),
 
 			// Default to a static front page and assign the front and posts pages.
-			'options'     => array(
-				'show_on_front'  => 'page',
-				'page_on_front'  => '{{home}}',
-				'page_for_posts' => '{{blog}}',
-			),
+'options'     => array(
+	'show_on_front'  => 'page',
+	'page_on_front'  => '{{home}}',
+	'page_for_posts' => '{{blog}}',
+),
 
 			// Setting theme mods of slider settings.
-			'theme_mods'  => array(
-				'custom_logo'                              => '{{image-logo}}',
-				'spacious[spacious_show_header_logo_text]' => 'both',
-				'spacious[spacious_activate_slider]'       => '1',
-				'spacious[spacious_blog_slider]'           => '1',
-				'spacious[spacious_slider_image1]'         => get_template_directory_uri() . '/images/book.jpg',
-				'spacious[spacious_slider_title1]'         => esc_html__( 'Enter title for your slider.', 'spacious' ),
-				'spacious[spacious_slider_text1]'          => 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw.',
-				'spacious[spacious_slider_button_text1]'   => esc_html__( 'Read more', 'spacious' ),
-				'spacious[spacious_slider_link1]'          => '#',
-				'spacious[spacious_slider_image2]'         => get_template_directory_uri() . '/images/chess.jpg',
-				'spacious[spacious_slider_title2]'         => esc_html__( 'Enter title for your slider.', 'spacious' ),
-				'spacious[spacious_slider_text2]'          => 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw.',
-				'spacious[spacious_slider_button_text2]'   => esc_html__( 'Read more', 'spacious' ),
-				'spacious[spacious_slider_link2]'          => '#',
-			),
+'theme_mods'  => array(
+	'custom_logo'                              => '{{image-logo}}',
+	'spacious[spacious_show_header_logo_text]' => 'both',
+	'spacious[spacious_activate_slider]'       => '1',
+	'spacious[spacious_blog_slider]'           => '1',
+	'spacious[spacious_slider_image1]'         => get_template_directory_uri() . '/images/book.jpg',
+	'spacious[spacious_slider_title1]'         => esc_html__( 'Enter title for your slider.', 'spacious' ),
+	'spacious[spacious_slider_text1]'          => 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw.',
+	'spacious[spacious_slider_button_text1]'   => esc_html__( 'Read more', 'spacious' ),
+	'spacious[spacious_slider_link1]'          => '#',
+	'spacious[spacious_slider_image2]'         => get_template_directory_uri() . '/images/chess.jpg',
+	'spacious[spacious_slider_title2]'         => esc_html__( 'Enter title for your slider.', 'spacious' ),
+	'spacious[spacious_slider_text2]'          => 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw.',
+	'spacious[spacious_slider_button_text2]'   => esc_html__( 'Read more', 'spacious' ),
+	'spacious[spacious_slider_link2]'          => '#',
+),
 
 			// Set up nav menus for each of the two areas registered in the theme.
-			'nav_menus'   => array(
+'nav_menus'   => array(
 				// Assign a menu to the "primary" location.
-				'primary' => array(
-					'name'  => esc_html__( 'Primary Menu', 'spacious' ),
-					'items' => array(
-						'link_home',
+	'primary' => array(
+		'name'  => esc_html__( 'Primary Menu', 'spacious' ),
+		'items' => array(
+			'link_home',
 						// Note that the core "home" page is actually a link in case a static front page is not used.
-						'page_about',
-						'page_blog',
-						'page_contact',
-					),
-				),
+			'page_about',
+			'page_blog',
+			'page_contact',
+		),
+	),
 
 				// Assign a menu to the "footer" location.
-				'footer'  => array(
-					'name'  => esc_html__( 'Footer Menu', 'spacious' ),
-					'items' => array(
-						'page_about',
-						'page_blog',
-						'page_contact',
-					),
-				),
-			),
-		);
+	'footer'  => array(
+		'name'  => esc_html__( 'Footer Menu', 'spacious' ),
+		'items' => array(
+			'page_about',
+			'page_blog',
+			'page_contact',
+		),
+	),
+),
+);
 
-		$starter_content = apply_filters( 'spacious_starter_content', $starter_content );
+$starter_content = apply_filters( 'spacious_starter_content', $starter_content );
 
-		add_theme_support( 'starter-content', $starter_content );
-	}
+add_theme_support( 'starter-content', $starter_content );
+}
 endif;
 add_action( 'after_setup_theme', 'spacious_setup' );
 
@@ -552,17 +552,33 @@ add_action('admin_head', 'wpse_52099_script_enqueuer');
 
 function wpse_52099_script_enqueuer() {
 
-  
 
-echo <<<HTML
-<style type="text/css">
-#menu-posts-anwp_match , #menu-posts-anwp_club , #menu-posts-anwp_referee,
-#menu-posts-anwp_competition, #menu-posts-anwp_player, #menu-posts-anwp_staff {
-    display:none;
+
+	echo <<<HTML
+	<style type="text/css">
+	#menu-posts-anwp_match , #menu-posts-anwp_club , #menu-posts-anwp_referee,
+	#menu-posts-anwp_competition, #menu-posts-anwp_player, #menu-posts-anwp_staff {
+		display:none;
+	}
+	</style>
+
+	HTML;
+
+
 }
-</style>
 
-HTML;
 
-    
+
+function wm_theme_scripts(){
+	wp_register_style('wm-custom-styles', get_stylesheet_directory_uri() . '/wm-style.css' ,array(),time());
+	wp_enqueue_style('wm-custom-styles');
+
+	wp_enqueue_script( 'wm-custom-script', get_template_directory_uri() . '/js/wm-custom-script.js', array( 'jquery' ) );
+	wp_localize_script( 'wm-custom-script', 'MyAjax', 
+		array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		)
+	);
+
 }
+add_action( 'wp_enqueue_scripts', 'wm_theme_scripts' );

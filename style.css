@@ -21,10 +21,10 @@ and Blueprint http://www.blueprintcss.org/
 -------------------------------------------------------------- */
 @IMPORT url("country-flags.css");
 .s24-medals-data-icon{
- background: url('/wp-content/themes/spacious/images/flags_round_all.png') no-repeat top left;
-    width: 25px;
-    height: 25px;
-    text-indent: 30px;
+	background: url('/wp-content/themes/spacious/images/flags_round_all.png') no-repeat top left;
+	width: 25px;
+	height: 25px;
+	text-indent: 30px;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
@@ -2157,7 +2157,7 @@ body.no-sidebar-content-stretched #main .inner-wrap #primary {
 
 #header-text-nav-container {
 	border-bottom: 1px solid #EAEAEA;
-	    background: #001e28;
+	background: #001e28;
 }
 
 #header-text-nav-wrap {
@@ -2413,8 +2413,8 @@ li.default-menu {
 	color: #1f7fbc;
 }
 .main-navigation ul li.current-menu-item a,.main-navigation ul li.current_page_item a{
-    color: white;
-    border-bottom: 2px solid red;
+	color: white;
+	border-bottom: 2px solid red;
 }
 
 .main-navigation ul li ul, .main-navigation ul li:hover ul ul {
@@ -3601,3 +3601,27 @@ li.default-menu {
 
 
 
+.bg-white{
+	background-color: #fff;
+}
+
+.wm-competition{
+	margin-bottom: 10px;
+	overflow: hidden;
+	display: flex !important;
+}
+.wm-competition a{
+	padding: 5px 15px;
+	color: #000;
+	font-size: 16px;
+	line-height: 30px;
+	position: relative;
+	background: #fff;
+	border-radius: 40px;
+	margin-right: 10px;
+	display: block;
+}
+.wm-competition a:hover {
+	color: #fff;
+	background: #da1818;
+}

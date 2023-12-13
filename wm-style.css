@@ -1,0 +1,62 @@
+.wm-match-list.match-list--slider{
+	margin-bottom: 10px;
+}
+.owl-nav{
+	display: none;
+}
+
+.wm-match-list.match-list--slider .anwp-fl-game{
+	background-image: url('http://localhost/24hscore/football-news/wp-content/plugins/football-leagues-by-anwppro-premium-premium/public/img/stadium.jpg');
+	background-size: cover;
+	padding: 0 0 20px 0 !important;
+	background-position: center;
+	position: relative;
+	background-repeat: no-repeat;
+}
+.wm-match-list.match-list--slider .anwp-fl-game:after{
+	content: '';
+	position : absolute ;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 1;
+}
+.wm-match-list.match-list--slider .anwp-fl-game .anwp-link-cover{
+	z-index: 10;
+}
+.wm-match-list.match-list--slider .anwp-fl-game .match-list-item__kickoff{
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position : relative ;
+	z-index: 8;
+	background-color: rgba(0, 0, 0, .6);
+	padding: 10px 15px !important;
+}
+.wm-match-list.match-list--slider .anwp-fl-game img{
+	width: auto !important;
+}
+
+.wm-match-list.match-list--slider .anwp-fl-game .match-simple__team{
+	color: #fff;
+	overflow: initial;
+	
+}
+.wm-match-list.match-list--slider .anwp-fl-game .match-simple__date,
+.wm-match-list.match-list--slider .anwp-fl-game .match-simple__time{
+	font-weight: 700;
+	font-size: 12px;
+	color: #fff;
+	z-index: 9;
+}
+
+.wm-match-list.match-list--slider .anwp-fl-game .anwp-row{
+	position : relative ;
+	z-index: 9;
+}
+.wm-match-list.match-list--slider .anwp-fl-game .match-simple__scores-number{
+	color: #fff;
+	min-width: 10px;
+}
