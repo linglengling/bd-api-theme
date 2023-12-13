@@ -231,9 +231,7 @@ foreach ($favLeaguesArray as $favLeagues) {
                 </style>
                
                 <div class="main-left">
-                    <?php echo do_shortcode('[anwpfl-matches competition_id="2549,8570,4324" show_secondary="0" season_id="" league_id="" group_id="" type="fixture" limit="20" date_from="" date_to="" stadium_id="" filter_by_clubs="" home_club="" away_club="" filter_by_matchweeks="" days_offset="" days_offset_to="" sort_by_date="desc" sort_by_matchweek="asc" group_by="competition" group_by_header_style="" show_club_logos="1" show_match_datetime="1" competition_logo="1" include_ids="" exclude_ids="" outcome_id="" no_data_text="" layout="" show_load_more="0"]
-
-                    ') ?>
+               
 
                    <?php echo get_field('custom-html-main-2', get_the_ID()) ?>
                    
