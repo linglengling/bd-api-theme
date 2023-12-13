@@ -309,7 +309,7 @@ foreach ($favLeaguesArray as $favLeagues) {
 
 
         <?php
-        curl_close($ch);
+   
         while (have_posts()):
             the_post(); ?>
             <?php get_template_part("content", "page"); ?>
