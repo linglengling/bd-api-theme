@@ -33,6 +33,8 @@
 	background-image: url(img/SVG/football.svg);
 }
 
+.wpml-ls-statics-shortcode_actions {display:none ;}
+
 @media (max-width: 767px) {
     #menu-menu-1{
         margin-left: 0;
@@ -50,6 +52,18 @@
         #content .post, #content .page {
             padding: 10px;
         }
+        
+ .wpml-ls-slot-3 {
+               display: none !important;
+        }
+        .wpml-ls-statics-shortcode_actions {display:block !important;}
+        
 }
 
+@media (max-width: 500px) {
 
+        .wpml-ls-slot-3 {
+               display: none;
+        }
+         .wpml-ls-statics-shortcode_actions {display:block !important;}
+}

@@ -76,7 +76,7 @@ $urlAwayTeamName=str_replace(',', ' ', $urlAwayTeamName);
 		<script type='text/javascript' src='/wp-content/themes/spacious/js/custom.js?ver=5.9.1' id='mycustom-js'></script>
          <link rel="stylesheet" href="/wp-content/themes/spacious/css/date/classic.css" />
     <link rel="stylesheet" href="/wp-content/themes/spacious/css/date/classic.date.css" />  
-	<link rel="stylesheet" href="/wp-content/themes/spacious/custom-theme.css?ver=1" />
+	<link rel="stylesheet" href="/wp-content/themes/spacious/custom-theme.css?ver=1.3" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW39TX25TH"></script>
@@ -144,7 +144,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 <!--					<div class="small-info-text"><?php echo $text;?><?php spacious_header_info_text(); ?></div>-->
                                                                         <div class="small-info-text">
                                     <div class="main-header-module-settings-tooltip" aria-expanded="false">
-                                        <?php // echo do_shortcode('[gtranslate]'); ?>
+                                        <?php echo do_action('wpml_add_language_selector'); // echo do_shortcode('[gtranslate]'); ?>
 <!--   <button class="main-header-module-settings-button">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
          <g fill="#ffffff" fill-rule="nonzero">
