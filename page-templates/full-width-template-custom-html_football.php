@@ -230,18 +230,7 @@ foreach ($favLeaguesArray as $favLeagues) {
                     
                 </style>
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-                
-                <div class="wm-competition slick-slider">
-                    <a href="">Bundesliga</a>                        
-                    <a href="">Ligue 1</a>
-                    <a href="">Premier League</a>
-                    <a href="">Serie A</a>
-                    <a href="">UEFA Champions League</a>
-                    
-                </div>
+
                 <style>
                     .wm-competition{
                         margin-bottom: 10px;
@@ -264,22 +253,8 @@ foreach ($favLeaguesArray as $favLeagues) {
                         background: #da1818;
                     }
                 </style>
-                <script>
-                    (function($){
-                        $(document).ready(function(){
-                            $('.wm-competition').slick({
-                                dots: false,
-                                infinite: false,
-                                speed: 500,
-                                swipe: true,
-                                centerMode: false,
-                                variableWidth: true,
-                                swipeToSlide: true,
-                                arrows: false
-                            });
-                        });
-                    })(jQuery);
-                </script>
+                
+
                 
                 <div class="main-left">
                     <?php echo do_shortcode('[anwpfl-matches competition_id="2549,8570,4324" show_secondary="0" season_id="" league_id="" group_id="" type="fixture" limit="20" date_from="" date_to="" stadium_id="" filter_by_clubs="" home_club="" away_club="" filter_by_matchweeks="" days_offset="" days_offset_to="" sort_by_date="desc" sort_by_matchweek="asc" group_by="competition" group_by_header_style="" show_club_logos="1" show_match_datetime="1" competition_logo="1" include_ids="" exclude_ids="" outcome_id="" no_data_text="" layout="" show_load_more="0"]
