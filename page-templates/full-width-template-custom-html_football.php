@@ -231,49 +231,26 @@ foreach ($favLeaguesArray as $favLeagues) {
                 </style>
 
 
-                <style>
-                    .wm-competition{
-                        margin-bottom: 10px;
-                        overflow: hidden;
-                        display: flex !important;
-                    }
-                    .wm-competition a{
-                        padding: 5px 15px;
-                        color: #000;
-                        font-size: 16px;
-                        line-height: 30px;
-                        position: relative;
-                        background: #fff;
-                        border-radius: 40px;
-                        margin-right: 10px;
-                        display: block;
-                    }
-                    .wm-competition a:hover {
-                        color: #fff;
-                        background: #da1818;
-                    }
-                </style>
+
                 
 
                 
                 <div class="main-left">
-                    <?php echo do_shortcode('[anwpfl-matches competition_id="2549,8570,4324" show_secondary="0" season_id="" league_id="" group_id="" type="fixture" limit="20" date_from="" date_to="" stadium_id="" filter_by_clubs="" home_club="" away_club="" filter_by_matchweeks="" days_offset="" days_offset_to="" sort_by_date="desc" sort_by_matchweek="asc" group_by="competition" group_by_header_style="" show_club_logos="1" show_match_datetime="1" competition_logo="1" include_ids="" exclude_ids="" outcome_id="" no_data_text="" layout="" show_load_more="0"]
+                    <?php echo do_shortcode('[anwpfl-matches competition_id="2549,8570,4324" show_secondary="0" season_id="" league_id="" group_id="" type="fixture" limit="5" date_from="'.date('Y-m-d').'" date_to="'.date('Y-m-d',strtotime('+4 days')).'" stadium_id="" filter_by_clubs="" home_club="" away_club="" filter_by_matchweeks="" days_offset="" days_offset_to=""  sort_by_matchweek="asc" group_by="competition" group_by_header_style="" show_club_logos="1" show_match_datetime="1" competition_logo="1" include_ids="" exclude_ids="" outcome_id="" no_data_text="" layout="" show_load_more="0"]') ?>
 
-                    ') ?>
+                    <?php echo get_field('custom-html-main-2', get_the_ID()) ?>
 
-                   <?php echo get_field('custom-html-main-2', get_the_ID()) ?>
-                   
                     <div class="2h-live-score-frame" style="position:relative;">
                         <div class="24hscore-ads" style="
-                                width: 100%;
-                                height: 50px;
-                                background: #666666;
-                                position: absolute;
-                                background-image: url(https://24hscore.com/wp-content/uploads/2023/12/1xbet-banner.jpg);
-                                background-size: contain;
-                            "></div>
-                         <?php echo get_field('custom-html-main', get_the_ID()) ?>
-                        </div>
+                        width: 100%;
+                        height: 50px;
+                        background: #666666;
+                        position: absolute;
+                        background-image: url(https://24hscore.com/wp-content/uploads/2023/12/1xbet-banner.jpg);
+                        background-size: contain;
+                        "></div>
+                        <?php echo get_field('custom-html-main', get_the_ID()) ?>
+                    </div>
                 </div>
 
                 <div class="col-right_right">
@@ -299,7 +276,7 @@ foreach ($favLeaguesArray as $favLeagues) {
                     </div><!-- End Class rightcontent -->   
 
 
-                    
+
                 </div>
             </div>
         </div>
@@ -309,7 +286,7 @@ foreach ($favLeaguesArray as $favLeagues) {
 
 
         <?php
-   
+
         while (have_posts()):
             the_post(); ?>
             <?php get_template_part("content", "page"); ?>

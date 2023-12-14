@@ -31,7 +31,7 @@
                         nav:false
                     },
                     1000:{
-                        items:4,
+                        items:2,
                         nav:true,
                         loop:false
                     }

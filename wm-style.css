@@ -6,9 +6,9 @@
 }
 
 .wm-match-list.match-list--slider .anwp-fl-game{
-	background-image: url('http://localhost/24hscore/football-news/wp-content/plugins/football-leagues-by-anwppro-premium-premium/public/img/stadium.jpg');
+	background-image: url('images/ezgif.com-gif-maker-3.webp');
 	background-size: cover;
-	padding: 0 0 20px 0 !important;
+	padding: 0 !important;
 	background-position: center;
 	position: relative;
 	background-repeat: no-repeat;
@@ -36,7 +36,8 @@
 	padding: 10px 15px !important;
 }
 .wm-match-list.match-list--slider .anwp-fl-game img{
-	width: auto !important;
+	width: 40px !important;
+	height: 40px;
 }
 
 .wm-match-list.match-list--slider .anwp-fl-game .match-simple__team{
@@ -59,4 +60,78 @@
 .wm-match-list.match-list--slider .anwp-fl-game .match-simple__scores-number{
 	color: #fff;
 	min-width: 10px;
+}
+/*-----------------------*\
+    COWNDOWN
+\*-----------------------*/
+.wm-match-list.match-list--slider .anwp-fl-game .anwp-fl-game-countdown{
+	position : relative ;
+	z-index: 19;
+}
+.wm-match-list.match-list--slider .anwp-fl-game .anwp-fl-game-countdown .anwp-fl-game-countdown__item {
+	height: 40px;
+	position: relative;
+	width: 40px;
+	border: 1px solid #fff;
+	display: block;
+	line-height: 40px;
+	border-radius: 50%;
+}
+.wm-match-list.match-list--slider .anwp-fl-game .anwp-fl-game-countdown .anwp-fl-game-countdown__label {
+	font-size: 8px;
+	line-height: 1;
+	color: #fff;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.wm-match-list.match-list--slider .anwp-fl-game .anwp-fl-game-countdown .anwp-fl-game-countdown__separator{
+	border: 1px solid #e5e5e5;
+	height: 20px;
+	margin: 10px 5px;
+}
+.wm-match-list.match-list--slider .anwp-fl-game .anwp-fl-game-countdown .anwp-fl-game-countdown__value{
+	color: #fff;
+	font-size: 12px;
+	padding: 0;
+	line-height: 40px;
+}
+
+
+/*-----------------------*\
+    RESPONSIVE
+\*-----------------------*/
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.wm-competition a{
+		padding: 0px 10px;
+		font-size: 14px;
+		line-height: 26px;
+	}
+	.container .row{
+		padding-top: 0 !important;
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
 }
