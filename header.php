@@ -15,83 +15,83 @@
 <!--[if IE 8]>
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
-<!--[if !(IE 7) & !(IE 8)]><!-->
-<html <?php language_attributes(); ?>>
-<!--<![endif]-->
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-        
-        
-	<?php
-        
-        
-        $pagename = "";
-$pagename = basename(get_permalink());
+	<!--[if !(IE 7) & !(IE 8)]><!-->
+		<html <?php language_attributes(); ?>>
+		<!--<![endif]-->
+			<head>
+				<meta charset="<?php bloginfo( 'charset' ); ?>" />
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="profile" href="http://gmpg.org/xfn/11" />
+				
+				
+				<?php
+				
+				
+				$pagename = "";
+				$pagename = basename(get_permalink());
 //if($pagename == "nicescore.com"){
 //    $pagename="football";
 //}
 
 
-$urlgameIdArray = array();
-$urlgameIdArray[0]=get_query_var('gameId');
-$urlgameId1=explode("-", $urlgameIdArray[0]);
-$urlgameId=$urlgameId1[0];
-$urlteamId=$urlgameId1[1];
+				$urlgameIdArray = array();
+				$urlgameIdArray[0]=get_query_var('gameId');
+				$urlgameId1=explode("-", $urlgameIdArray[0]);
+				$urlgameId=$urlgameId1[0];
+				$urlteamId=$urlgameId1[1];
 
 
 
-?>
-        <?php
-        if(is_numeric($urlgameId)){
-   $urlTeamNamesArray = array();
-$urlTeamNamesArray[0]=get_query_var('countryName');
-$urlTeamNamesArray1=explode("-", $urlTeamNamesArray[0]);
-$urlHomeTeamName=$urlTeamNamesArray1[0];
-$urlAwayTeamName=$urlTeamNamesArray1[1];
-$urlHomeTeamName=str_replace(',', ' ', $urlHomeTeamName);
-$urlAwayTeamName=str_replace(',', ' ', $urlAwayTeamName);
-?>
-         <title><?php echo urldecode($urlHomeTeamName). " vs ". urldecode($urlAwayTeamName) . " " . urldecode(str_replace('-', ' ', get_query_var('leagueName'))); ?> - Livescore, Results and Fixtures | 24Hscore</title>
-        <meta name="description" content="Get the latest updates on <?php echo urldecode($urlHomeTeamName). " vs ". urldecode($urlAwayTeamName) . " " . urldecode(str_replace('-', ' ', get_query_var('leagueName'))); ?>. Livescore, Fixtures & Results, Statistics, Standing." class="yoast-seo-meta-tag" />
-             <?php
-        
-            }
-        else if (get_query_var('leagueId') != "") {
-         ?>
-        <title><?php echo urldecode(str_replace('-', ' ', get_query_var('leagueName'))); ?> - Livescore, Results and Fixtures | 24Hscore</title>
-        <?php
-        }
-        else{
-        ?>
-<!--        <title><?php echo $pagename;?> - Livescore, Results, Fixtures and Stats</title>-->
-         <?php
-        }
+				?>
+				<?php
+				if(is_numeric($urlgameId)){
+					$urlTeamNamesArray = array();
+					$urlTeamNamesArray[0]=get_query_var('countryName');
+					$urlTeamNamesArray1=explode("-", $urlTeamNamesArray[0]);
+					$urlHomeTeamName=$urlTeamNamesArray1[0];
+					$urlAwayTeamName=$urlTeamNamesArray1[1];
+					$urlHomeTeamName=str_replace(',', ' ', $urlHomeTeamName);
+					$urlAwayTeamName=str_replace(',', ' ', $urlAwayTeamName);
+					?>
+					<title><?php echo urldecode($urlHomeTeamName). " vs ". urldecode($urlAwayTeamName) . " " . urldecode(str_replace('-', ' ', get_query_var('leagueName'))); ?> - Livescore, Results and Fixtures | 24Hscore</title>
+					<meta name="description" content="Get the latest updates on <?php echo urldecode($urlHomeTeamName). " vs ". urldecode($urlAwayTeamName) . " " . urldecode(str_replace('-', ' ', get_query_var('leagueName'))); ?>. Livescore, Fixtures & Results, Statistics, Standing." class="yoast-seo-meta-tag" />
+					<?php
+					
+				}
+				else if (get_query_var('leagueId') != "") {
+					?>
+					<title><?php echo urldecode(str_replace('-', ' ', get_query_var('leagueName'))); ?> - Livescore, Results and Fixtures | 24Hscore</title>
+					<?php
+				}
+				else{
+					?>
+					<!--        <title><?php echo $pagename;?> - Livescore, Results, Fixtures and Stats</title>-->
+					<?php
+				}
 	/**
 	 * This hook is important for wordpress plugins and other many things
 	 */
 	wp_head();
-	?><script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
-		<script type='text/javascript' src='/wp-content/themes/spacious/js/custom.js?ver=5.9.1' id='mycustom-js'></script>
-         <link rel="stylesheet" href="/wp-content/themes/spacious/css/date/classic.css" />
-    <link rel="stylesheet" href="/wp-content/themes/spacious/css/date/classic.date.css" />  
-	<link rel="stylesheet" href="/wp-content/themes/spacious/custom-theme.css?ver=1.3" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+?><script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+<script type='text/javascript' src='/wp-content/themes/spacious/js/custom.js?ver=5.9.1' id='mycustom-js'></script>
+<link rel="stylesheet" href="/wp-content/themes/spacious/css/date/classic.css" />
+<link rel="stylesheet" href="/wp-content/themes/spacious/css/date/classic.date.css" />  
+<link rel="stylesheet" href="/wp-content/themes/spacious/custom-theme.css?ver=1.3" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW39TX25TH"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
-  gtag('config', 'G-PW39TX25TH');
+	gtag('config', 'G-PW39TX25TH');
 </script>
 </head>
 
 <body <?php body_class(); ?>>
 
-<?php
+	<?php
 /**
  * WordPress function to load custom scripts after body.
  *
@@ -129,22 +129,22 @@ if ( function_exists( 'wp_body_open' ) ) {
 						spacious_social_links();
 					}
 					?>
-                    <?php
-                    global $wp;
-                    $text="";
-                    $pagename = get_query_var('pagename');
-                    if ( !$pagename ) {
-                        $text="Football";
-                        }
-                        else{
-                    $link = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
-                    $text = wp_title( '', false );
-                        }
-                    ?>
-<!--					<div class="small-info-text"><?php echo $text;?><?php spacious_header_info_text(); ?></div>-->
-                                                                        <div class="small-info-text">
-                                    <div class="main-header-module-settings-tooltip" aria-expanded="false">
-                                        <?php echo do_action('wpml_add_language_selector'); // echo do_shortcode('[gtranslate]'); ?>
+					<?php
+					global $wp;
+					$text="";
+					$pagename = get_query_var('pagename');
+					if ( !$pagename ) {
+						$text="Football";
+					}
+					else{
+						$link = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
+						$text = wp_title( '', false );
+					}
+					?>
+					<!--					<div class="small-info-text"><?php echo $text;?><?php spacious_header_info_text(); ?></div>-->
+					<div class="small-info-text">
+						<div class="main-header-module-settings-tooltip" aria-expanded="false">
+							<?php echo do_action('wpml_add_language_selector'); // echo do_shortcode('[gtranslate]'); ?>
 <!--   <button class="main-header-module-settings-button">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
          <g fill="#ffffff" fill-rule="nonzero">
@@ -152,67 +152,67 @@ if ( function_exists( 'wp_body_open' ) ) {
             <path d="M8 4C5.793 4 4 5.793 4 8s1.793 4 4 4 4-1.793 4-4-1.793-4-4-4zm0 6.955A2.956 2.956 0 0 1 5.045 8 2.956 2.956 0 0 1 8 5.045 2.956 2.956 0 0 1 10.955 8 2.956 2.956 0 0 1 8 10.955z"></path>
          </g>
       </svg>
-   </button>-->
+  </button>-->
 </div>    
-                                        
-                                    </div>
 
-					<nav class="small-menu" class="clearfix">
-						<?php
-						if ( has_nav_menu( 'header' ) ) {
-							wp_nav_menu( array( 'theme_location' => 'header', 'depth' => -1 ) );
-						}
-						?>
-					</nav>
-				</div>
-			</div>
-		<?php } ?>
+</div>
 
-		<?php if ( 'above' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
-			spacious_render_header_image();
-		} ?>
+<nav class="small-menu" class="clearfix">
+	<?php
+	if ( has_nav_menu( 'header' ) ) {
+		wp_nav_menu( array( 'theme_location' => 'header', 'depth' => -1 ) );
+	}
+	?>
+</nav>
+</div>
+</div>
+<?php } ?>
 
-		<div id="header-text-nav-container" class="<?php echo ( get_theme_mod( 'spacious_one_line_menu_setting', 0 ) == 1 ) ? 'menu-one-line' : ''; ?>">
+<?php if ( 'above' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
+	spacious_render_header_image();
+} ?>
 
-			<div class="inner-wrap" id="<?php echo esc_attr( $header_class ); ?>">
+<div id="header-text-nav-container" class="<?php echo ( get_theme_mod( 'spacious_one_line_menu_setting', 0 ) == 1 ) ? 'menu-one-line' : ''; ?>">
 
-				<div id="header-text-nav-wrap" class="clearfix">
-					<div id="header-left-section">
-						<?php
-						if ( ( 'both' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) || 'logo_only' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) ) ) { ?>
-							<div id="header-logo-image">
+	<div class="inner-wrap" id="<?php echo esc_attr( $header_class ); ?>">
 
-								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
-									spacious_the_custom_logo();
-								} ?>
+		<div id="header-text-nav-wrap" class="clearfix">
+			<div id="header-left-section">
+				<?php
+				if ( ( 'both' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) || 'logo_only' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) ) ) { ?>
+					<div id="header-logo-image">
 
-							</div><!-- #header-logo-image -->
-
-							<?php
-						}
-
-						$screen_reader = '';
-						if ( ( 'logo_only' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) || 'none' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) ) ) {
-							$screen_reader = 'screen-reader-text';
+						<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
+							spacious_the_custom_logo();
 						} ?>
 
-						<div id="header-text" class="<?php echo $screen_reader; ?>">
-							<?php if ( is_front_page() || is_home() ) : ?>
-								<h1 id="site-title">
-									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-									   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-									   rel="home"><?php bloginfo( 'name' ); ?></a>
-								</h1>
-							<?php else : ?>
-								<h3 id="site-title">
-									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-									   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-									   rel="home"><?php bloginfo( 'name' ); ?></a>
-								</h3>
-							<?php endif;
+					</div><!-- #header-logo-image -->
 
-							$description = get_bloginfo( 'description', 'display' );
-							if ( $description || is_customize_preview() ) : ?>
+					<?php
+				}
+
+				$screen_reader = '';
+				if ( ( 'logo_only' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) || 'none' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) ) ) {
+					$screen_reader = 'screen-reader-text';
+				} ?>
+
+				<div id="header-text" class="<?php echo $screen_reader; ?>">
+					<?php if ( is_front_page() || is_home() ) : ?>
+					<h1 id="site-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+							title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+							rel="home"><?php bloginfo( 'name' ); ?></a>
+						</h1>
+					<?php else : ?>
+						<h3 id="site-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+								title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+								rel="home"><?php bloginfo( 'name' ); ?></a>
+							</h3>
+						<?php endif;
+
+						$description = get_bloginfo( 'description', 'display' );
+						if ( $description || is_customize_preview() ) : ?>
 							<p id="site-description"><?php echo $description; ?></p>
 							<?php endif; ?><!-- #site-description -->
 						</div><!-- #header-text -->
@@ -248,23 +248,61 @@ if ( function_exists( 'wp_body_open' ) ) {
                                       </a>
 					            </div>
 					        
-					            </div>-->
+					        </div>-->
 
 
-						<?php
-						if ( is_active_sidebar( 'spacious_header_sidebar' ) ) {
-							?>
-							<div id="header-right-sidebar" class="clearfix">
-								<?php
+					        <?php
+					        if ( is_active_sidebar( 'spacious_header_sidebar' ) ) {
+					        	?>
+					        	<div id="header-right-sidebar" class="clearfix">
+					        		<?php
 								// Calling the header sidebar if it exists.
-								if ( ! dynamic_sidebar( 'spacious_header_sidebar' ) ):
-								endif;
-								?>
-							</div>
-							<?php
-						} ?>
+					        		if ( ! dynamic_sidebar( 'spacious_header_sidebar' ) ):
+					        		endif;
+					        		?>
+					        	</div>
+					        	<?php
+					        } ?>
 
-						<?php if ( 'four' !== get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
+					        <?php if ( 'four' !== get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
+					        	<div class="header-action">
+					        		<?php
+					        		spacious_cart_icon();
+
+					        		if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
+					        			?>
+					        			<div class="search-wrapper">
+					        				<div class="search">
+					        					<i class="fa fa-search"> </i>
+					        				</div>
+					        				<div class="header-search-form">
+					        					<?php get_search_form(); ?>
+					        				</div>
+					        			</div><!-- /.search-wrapper -->
+					        		<?php endif; ?>
+					        	</div>
+					        <?php endif; ?>
+
+					        <?php if ( ! ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) ) :
+					        	spacious_main_nav();
+					        endif; ?>
+
+					    </div><!-- #header-right-section -->
+
+					</div><!-- #header-text-nav-wrap -->
+				</div><!-- .inner-wrap -->
+				<?php if ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
+					<div class="bottom-menu clearfix <?php echo esc_attr(get_theme_mod( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''); ?>">
+						<div class="inner-wrap clearfix">
+							<div id="header-logo-image">
+
+								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
+									spacious_the_custom_logo();
+								} ?>
+
+							</div><!-- #header-logo-image -->
+							<?php spacious_main_nav(); ?>
+
 							<div class="header-action">
 								<?php
 								spacious_cart_icon();
@@ -281,95 +319,57 @@ if ( function_exists( 'wp_body_open' ) ) {
 									</div><!-- /.search-wrapper -->
 								<?php endif; ?>
 							</div>
-						<?php endif; ?>
-
-						<?php if ( ! ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) ) :
-							spacious_main_nav();
-						endif; ?>
-
-					</div><!-- #header-right-section -->
-
-				</div><!-- #header-text-nav-wrap -->
-			</div><!-- .inner-wrap -->
-			<?php if ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
-				<div class="bottom-menu clearfix <?php echo esc_attr(get_theme_mod( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''); ?>">
-					<div class="inner-wrap clearfix">
-					    <div id="header-logo-image">
-
-								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
-									spacious_the_custom_logo();
-								} ?>
-
-							</div><!-- #header-logo-image -->
-						<?php spacious_main_nav(); ?>
-
-						<div class="header-action">
-							<?php
-							spacious_cart_icon();
-
-							if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
-								?>
-								<div class="search-wrapper">
-									<div class="search">
-										<i class="fa fa-search"> </i>
-									</div>
-									<div class="header-search-form">
-										<?php get_search_form(); ?>
-									</div>
-								</div><!-- /.search-wrapper -->
-							<?php endif; ?>
 						</div>
 					</div>
-				</div>
-			<?php endif; ?>
-		</div><!-- #header-text-nav-container -->
+				<?php endif; ?>
+			</div><!-- #header-text-nav-container -->
 
-		<?php if ( 'below' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
-			spacious_render_header_image();
-		} ?>
+			<?php if ( 'below' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
+				spacious_render_header_image();
+			} ?>
 
-		<?php
-		if ( get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
-			if ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' ) {
-				if ( is_home() || is_front_page() ) {
-					spacious_featured_image_slider();
-				}
-			} else {
-				if ( is_front_page() ) {
-					spacious_featured_image_slider();
+			<?php
+			if ( get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
+				if ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' ) {
+					if ( is_home() || is_front_page() ) {
+						spacious_featured_image_slider();
+					}
+				} else {
+					if ( is_front_page() ) {
+						spacious_featured_image_slider();
+					}
 				}
 			}
-		}
 
-		if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! get_theme_mod( 'spacious_header_title_hide', 0 ) ) ) {
-			if ( ! ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
-				<div class="header-post-title-container clearfix">
-					<div class="inner-wrap">
-						<div class="post-title-wrapper">
-							<?php
-							if ( '' != spacious_header_title() ) {
-								?>
-								<?php if ( is_home() ) : ?>
-									<h2 class="header-post-title-class"><?php echo spacious_header_title(); ?></h2>
-								<?php else : ?>
-									<h1 class="header-post-title-class"><?php echo spacious_header_title(); ?></h1>
-								<?php endif; ?>
+			if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! get_theme_mod( 'spacious_header_title_hide', 0 ) ) ) {
+				if ( ! ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
+					<div class="header-post-title-container clearfix">
+						<div class="inner-wrap">
+							<div class="post-title-wrapper">
 								<?php
-							}
-							?>
+								if ( '' != spacious_header_title() ) {
+									?>
+									<?php if ( is_home() ) : ?>
+										<h2 class="header-post-title-class"><?php echo spacious_header_title(); ?></h2>
+									<?php else : ?>
+										<h1 class="header-post-title-class"><?php echo spacious_header_title(); ?></h1>
+									<?php endif; ?>
+									<?php
+								}
+								?>
+							</div>
+							<?php if ( function_exists( 'spacious_breadcrumb' ) ) {
+								spacious_breadcrumb();
+							} ?>
 						</div>
-						<?php if ( function_exists( 'spacious_breadcrumb' ) ) {
-							spacious_breadcrumb();
-						} ?>
 					</div>
-				</div>
-				<?php
+					<?php
+				}
 			}
-		}
-		?>
-	</header>
-	<?php do_action( 'spacious_after_header' ); ?>
-	<?php do_action( 'spacious_before_main' ); ?>
-	<div id="main" class="clearfix">
-            <?php include 'page-templates/breadcrum.php'; ?>
-		<div class="inner-wrap">
+			?>
+		</header>
+		<?php do_action( 'spacious_after_header' ); ?>
+		<?php do_action( 'spacious_before_main' ); ?>
+		<div id="main" class="clearfix">
+			<?php include 'page-templates/breadcrum.php'; ?>
+			<div class="inner-wrap">
