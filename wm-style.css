@@ -46,6 +46,8 @@
 .wm-match-list.match-list--slider .anwp-fl-game .match-simple__team{
 	color: #fff;
 	overflow: initial;
+        font-size: 15px;
+	font-weight: bold;
 	
 }
 .wm-match-list.match-list--slider .anwp-fl-game .match-simple__date,
