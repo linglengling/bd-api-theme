@@ -20,7 +20,7 @@
                 nav:false,
                 dots:false,
                 autoplay:true,
-                autoplayTimeout:10000,
+                autoplayTimeout:20000,
                 responsiveClass:true,
                 responsive:{
                     0:{
