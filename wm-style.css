@@ -144,3 +144,19 @@
 @media (max-width: 480px) {
 
 }
+
+
+ul.menu > li.hot > a:before {
+	content: "New";
+	font-weight: 700;
+    position: absolute;
+    font-size: 10px;
+    line-height: 10px;
+    color: #4f8237;
+    background-color: #badc58;
+    display: inline-block;
+    top: 8px;
+    right: 1px;
+    padding: 2px 7px;
+    border-radius: 8px;
+}
