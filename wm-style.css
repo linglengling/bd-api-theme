@@ -147,7 +147,7 @@
 
 
 ul.menu > li.hot > a:before {
-	content: "New";
+	content: "Hot";
 	font-weight: 700;
     position: absolute;
     font-size: 10px;

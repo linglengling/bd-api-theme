@@ -243,7 +243,7 @@ foreach ($favLeaguesArray as $favLeagues) {
                     <?php echo get_field('custom-html-main-2', get_the_ID()) ?>
 
                     <div class="2h-live-score-frame" style="position:relative;">
-                        <div class="24hscore-ads" style="
+                        <div class="24hscore-ads adsbaner" style="
                         width: 100%;
                         height: 50px;
                         background: #666666;
