@@ -87,6 +87,9 @@
 
 	gtag('config', 'G-PW39TX25TH');
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -152,7 +155,7 @@ if ( function_exists( 'wp_body_open' ) ) {
             <path d="M8 4C5.793 4 4 5.793 4 8s1.793 4 4 4 4-1.793 4-4-1.793-4-4-4zm0 6.955A2.956 2.956 0 0 1 5.045 8 2.956 2.956 0 0 1 8 5.045 2.956 2.956 0 0 1 10.955 8 2.956 2.956 0 0 1 8 10.955z"></path>
          </g>
       </svg>
-  </button>-->
+   </button>-->
 </div>    
 
 </div>
@@ -248,128 +251,128 @@ if ( function_exists( 'wp_body_open' ) ) {
                                       </a>
 					            </div>
 					        
-					        </div>-->
+					         </div>-->
 
 
-					        <?php
-					        if ( is_active_sidebar( 'spacious_header_sidebar' ) ) {
-					        	?>
-					        	<div id="header-right-sidebar" class="clearfix">
-					        		<?php
+					         <?php
+					         if ( is_active_sidebar( 'spacious_header_sidebar' ) ) {
+					         	?>
+					         	<div id="header-right-sidebar" class="clearfix">
+					         		<?php
 								// Calling the header sidebar if it exists.
-					        		if ( ! dynamic_sidebar( 'spacious_header_sidebar' ) ):
-					        		endif;
-					        		?>
-					        	</div>
-					        	<?php
-					        } ?>
+					         		if ( ! dynamic_sidebar( 'spacious_header_sidebar' ) ):
+					         		endif;
+					         		?>
+					         	</div>
+					         	<?php
+					         } ?>
 
-					        <?php if ( 'four' !== get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
-					        	<div class="header-action">
-					        		<?php
-					        		spacious_cart_icon();
+					         <?php if ( 'four' !== get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
+					         	<div class="header-action">
+					         		<?php
+					         		spacious_cart_icon();
 
-					        		if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
-					        			?>
-					        			<div class="search-wrapper">
-					        				<div class="search">
-					        					<i class="fa fa-search"> </i>
-					        				</div>
-					        				<div class="header-search-form">
-					        					<?php get_search_form(); ?>
-					        				</div>
-					        			</div><!-- /.search-wrapper -->
-					        		<?php endif; ?>
-					        	</div>
-					        <?php endif; ?>
+					         		if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
+					         			?>
+					         			<div class="search-wrapper">
+					         				<div class="search">
+					         					<i class="fa fa-search"> </i>
+					         				</div>
+					         				<div class="header-search-form">
+					         					<?php get_search_form(); ?>
+					         				</div>
+					         			</div><!-- /.search-wrapper -->
+					         		<?php endif; ?>
+					         	</div>
+					         <?php endif; ?>
 
-					        <?php if ( ! ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) ) :
-					        	spacious_main_nav();
-					        endif; ?>
+					         <?php if ( ! ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) ) :
+					         	spacious_main_nav();
+					         endif; ?>
 
-					    </div><!-- #header-right-section -->
+					      </div><!-- #header-right-section -->
 
-					</div><!-- #header-text-nav-wrap -->
-				</div><!-- .inner-wrap -->
-				<?php if ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
-					<div class="bottom-menu clearfix <?php echo esc_attr(get_theme_mod( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''); ?>">
-						<div class="inner-wrap clearfix">
-							<div id="header-logo-image">
+					   </div><!-- #header-text-nav-wrap -->
+					</div><!-- .inner-wrap -->
+					<?php if ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
+						<div class="bottom-menu clearfix <?php echo esc_attr(get_theme_mod( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''); ?>">
+							<div class="inner-wrap clearfix">
+								<div id="header-logo-image">
 
-								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
-									spacious_the_custom_logo();
-								} ?>
+									<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
+										spacious_the_custom_logo();
+									} ?>
 
-							</div><!-- #header-logo-image -->
-							<?php spacious_main_nav(); ?>
+								</div><!-- #header-logo-image -->
+								<?php spacious_main_nav(); ?>
 
-							<div class="header-action">
-								<?php
-								spacious_cart_icon();
-
-								if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
-									?>
-									<div class="search-wrapper">
-										<div class="search">
-											<i class="fa fa-search"> </i>
-										</div>
-										<div class="header-search-form">
-											<?php get_search_form(); ?>
-										</div>
-									</div><!-- /.search-wrapper -->
-								<?php endif; ?>
-							</div>
-						</div>
-					</div>
-				<?php endif; ?>
-			</div><!-- #header-text-nav-container -->
-
-			<?php if ( 'below' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
-				spacious_render_header_image();
-			} ?>
-
-			<?php
-			if ( get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
-				if ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' ) {
-					if ( is_home() || is_front_page() ) {
-						spacious_featured_image_slider();
-					}
-				} else {
-					if ( is_front_page() ) {
-						spacious_featured_image_slider();
-					}
-				}
-			}
-
-			if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! get_theme_mod( 'spacious_header_title_hide', 0 ) ) ) {
-				if ( ! ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
-					<div class="header-post-title-container clearfix">
-						<div class="inner-wrap">
-							<div class="post-title-wrapper">
-								<?php
-								if ( '' != spacious_header_title() ) {
-									?>
-									<?php if ( is_home() ) : ?>
-										<h2 class="header-post-title-class"><?php echo spacious_header_title(); ?></h2>
-									<?php else : ?>
-										<h1 class="header-post-title-class"><?php echo spacious_header_title(); ?></h1>
-									<?php endif; ?>
+								<div class="header-action">
 									<?php
-								}
-								?>
+									spacious_cart_icon();
+
+									if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
+										?>
+										<div class="search-wrapper">
+											<div class="search">
+												<i class="fa fa-search"> </i>
+											</div>
+											<div class="header-search-form">
+												<?php get_search_form(); ?>
+											</div>
+										</div><!-- /.search-wrapper -->
+									<?php endif; ?>
+								</div>
 							</div>
-							<?php if ( function_exists( 'spacious_breadcrumb' ) ) {
-								spacious_breadcrumb();
-							} ?>
 						</div>
-					</div>
-					<?php
+					<?php endif; ?>
+				</div><!-- #header-text-nav-container -->
+
+				<?php if ( 'below' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
+					spacious_render_header_image();
+				} ?>
+
+				<?php
+				if ( get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
+					if ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' ) {
+						if ( is_home() || is_front_page() ) {
+							spacious_featured_image_slider();
+						}
+					} else {
+						if ( is_front_page() ) {
+							spacious_featured_image_slider();
+						}
+					}
 				}
-			}
-			?>
-		</header>
-		<?php do_action( 'spacious_after_header' ); ?>
-		<?php do_action( 'spacious_before_main' ); ?>
-		<div id="main" class="clearfix">
-			<?php include 'page-templates/breadcrum.php'; ?>
-			<div class="inner-wrap">
+
+				if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! get_theme_mod( 'spacious_header_title_hide', 0 ) ) ) {
+					if ( ! ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
+						<div class="header-post-title-container clearfix">
+							<div class="inner-wrap">
+								<div class="post-title-wrapper">
+									<?php
+									if ( '' != spacious_header_title() ) {
+										?>
+										<?php if ( is_home() ) : ?>
+											<h2 class="header-post-title-class"><?php echo spacious_header_title(); ?></h2>
+										<?php else : ?>
+											<h1 class="header-post-title-class"><?php echo spacious_header_title(); ?></h1>
+										<?php endif; ?>
+										<?php
+									}
+									?>
+								</div>
+								<?php if ( function_exists( 'spacious_breadcrumb' ) ) {
+									spacious_breadcrumb();
+								} ?>
+							</div>
+						</div>
+						<?php
+					}
+				}
+				?>
+			</header>
+			<?php do_action( 'spacious_after_header' ); ?>
+			<?php do_action( 'spacious_before_main' ); ?>
+			<div id="main" class="clearfix">
+				<?php include 'page-templates/breadcrum.php'; ?>
+				<div class="inner-wrap">
