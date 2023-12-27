@@ -1,11 +1,7 @@
 (function($){
     $(document).ready(function(){
 
-        $('.anim-text-flow').html(function(i, html) {
-          var chars = $.trim(html).split("");
-
-          return '<span>' + chars.join('</span><span>') + '</span>';
-      });
+        
         
         if ($('.wm-competition').length){
             $('.wm-competition').slick({
