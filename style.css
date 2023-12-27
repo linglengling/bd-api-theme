@@ -3611,16 +3611,17 @@ li.default-menu {
 	display: flex !important;
 }
 .wm-competition a{
-	padding: 5px 15px;
+	padding: 0 15px;
 	color: #000;
-	font-size: 16px;
-	line-height: 30px;
+	font-size: 14px;
+	line-height: 26px;
 	position: relative;
 	background: #fff;
 	border-radius: 40px;
 	margin-right: 10px;
 	display: block;
 }
+.wm-competition a.slick-active,
 .wm-competition a:hover {
 	color: #fff;
 	background: #da1818;

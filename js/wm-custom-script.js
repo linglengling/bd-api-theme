@@ -1,5 +1,12 @@
 (function($){
     $(document).ready(function(){
+
+        $('.anim-text-flow').html(function(i, html) {
+          var chars = $.trim(html).split("");
+
+          return '<span>' + chars.join('</span><span>') + '</span>';
+      });
+        
         if ($('.wm-competition').length){
             $('.wm-competition').slick({
                 dots: false,
@@ -19,8 +26,8 @@
                 margin:10,
                 nav:false,
                 dots:false,
-                autoplay:true,
-                autoplayTimeout:20000,
+                // autoplay:true,
+                // autoplayTimeout:20000,
                 responsiveClass:true,
                 responsive:{
                     0:{
