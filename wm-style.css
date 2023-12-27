@@ -219,7 +219,7 @@
 	background-color: rgba(78, 129, 59,.78);
 }
 .math-forecast__rate-item--lowest {
-	background-color: rgba(78, 129, 59,.54);
+	background-color: rgba(78, 129, 59,.94);
 }
 .math-forecast__rate-item--highest {
 	background-color: rgba(78, 129, 59,.92);
@@ -1091,7 +1091,7 @@
 	flex-direction: column;
 }
 .math-forecast__rate-item--middle {
-	background-color: rgba(255,230,0,.48);
+	background-color: rgba(255,230,0,.78);
 }
 .math-forecast__rate-item--lowest {
 	background-color: rgba(255,230,0,.24);
@@ -1250,4 +1250,59 @@ ul.menu > li.hot > a:before {
 	right: 1px;
 	padding: 2px 7px;
 	border-radius: 8px;
+}
+
+.pin-new:before {
+    position: absolute;
+    right: 6px;
+    top: -10px;
+    content: "New";
+    animation: lightAnimation .3s ease-in-out infinite;
+    background-size: contain;
+    -webkit-animation: flickerAnimation 1s infinite;
+    -moz-animation: flickerAnimation 1s infinite;
+    -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+    color: #d3cd13;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'roboto';
+}
+
+.pin-hot:before {
+    position: absolute;
+    right: 6px;
+    top: -10px;
+    content: "Hot";
+    animation: lightAnimation .3s ease-in-out infinite;
+    background-size: contain;
+    -webkit-animation: flickerAnimation 1s infinite;
+    -moz-animation: flickerAnimation 1s infinite;
+    -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+    color: #d3cd13;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'roboto';
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
 }
