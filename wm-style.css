@@ -1276,10 +1276,10 @@ ul.menu > li.hot > a:before {
     content: "Hot";
     animation: lightAnimation .3s ease-in-out infinite;
     background-size: contain;
-    -webkit-animation: flickerAnimation 1s infinite;
-    -moz-animation: flickerAnimation 1s infinite;
-    -o-animation: flickerAnimation 1s infinite;
-    animation: flickerAnimation 1s infinite;
+    -webkit-animation: flickerAnimation 2s infinite;
+    -moz-animation: flickerAnimation 2s infinite;
+    -o-animation: flickerAnimation 2s infinite;
+    animation: flickerAnimation 2s infinite;
     color: #d3cd13;
     font-size: 12px;
     font-weight: bold;
