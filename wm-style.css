@@ -72,7 +72,7 @@
 \*-----------------------*/
 .wm-match-list.match-list--slider .anwp-fl-game .anwp-fl-game-countdown{
 	position : relative ;
-	z-index: 19;
+	z-index: 9;
 }
 .wm-match-list.match-list--slider .anwp-fl-game .anwp-fl-game-countdown .anwp-fl-game-countdown__item {
 	height: 50px;
@@ -118,7 +118,7 @@
 	justify-content: center;
 	display: flex;
 	position : relative ;
-	z-index: 99;
+	z-index: 9;
 	flex-direction: column;
 	align-items: center;
 	top: -10px;
@@ -202,7 +202,7 @@
 		;
 	}  
 }
-.math-forecast__rate {
+/*.math-forecast__rate {
 	padding: 0 12px;
 }
 .math-forecast__rate-item {
@@ -216,13 +216,17 @@
 	flex-direction: column;
 }
 .math-forecast__rate-item--middle {
-	background-color: rgba(78, 129, 59,.78);
+	background-color: rgba(78, 129, 59);
 }
 .math-forecast__rate-item--lowest {
+<<<<<<< Updated upstream
 	background-color: rgba(78, 129, 59,.94);
+=======
+	background-color: rgba(78, 129, 59);
+>>>>>>> Stashed changes
 }
 .math-forecast__rate-item--highest {
-	background-color: rgba(78, 129, 59,.92);
+	background-color: rgba(78, 129, 59);
 }
 .math-forecast__rate-index {
 	color: hsla(0,0%,8%,.32);
@@ -236,7 +240,7 @@
 	line-height: 20px;
 	text-align: center;
 	color: #141414;
-}
+}*/
 
 .wm-competition a.wm-hightline{
 	position: relative;
@@ -1091,13 +1095,17 @@
 	flex-direction: column;
 }
 .math-forecast__rate-item--middle {
+<<<<<<< Updated upstream
 	background-color: rgba(255,230,0,.78);
+=======
+	background-color: #4e813b;
+>>>>>>> Stashed changes
 }
 .math-forecast__rate-item--lowest {
-	background-color: rgba(255,230,0,.24);
+	background-color: #678f58;
 }
 .math-forecast__rate-item--highest {
-	background-color: rgba(255,230,0,.72);
+	background-color: #7dcd60;
 }
 .math-forecast__rate-index {
 	color: hsla(0,0%,8%,.32);
@@ -1106,13 +1114,17 @@
 	text-align: center;
 }
 .math-forecast__rate-value {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 700;
 	line-height: 20px;
 	text-align: center;
-	color: #141414;
+	color: #fff;
 }
-
+.math-forecast__rate-name{
+	color: #fff;
+	font-size: 10px;
+	line-height: 1.1;
+}
 
 
 .math-forecast__col {
