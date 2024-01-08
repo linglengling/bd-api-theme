@@ -375,4 +375,11 @@ if ( function_exists( 'wp_body_open' ) ) {
 			<?php do_action( 'spacious_before_main' ); ?>
 			<div id="main" class="clearfix">
 				<?php include 'page-templates/breadcrum.php'; ?>
-				<div class="inner-wrap">
+				<div class="inner-wrap">				
+					<?php 
+					$pageID = get_option('page_on_front');
+					$slider = get_field('custom-html-main-2',$pageID);
+					if(!is_front_page()){
+						echo $slider;
+					}
+				?>
