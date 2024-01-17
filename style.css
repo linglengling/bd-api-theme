@@ -3626,3 +3626,11 @@ li.default-menu {
 	color: #fff;
 	background: #ed533a;
 }
+
+
+body.page-template.page .wm-competition{
+	padding-top: 15px;
+}
+body.page-template.page .site-content .container.page-container > .row{
+	padding-top: ;
+}
