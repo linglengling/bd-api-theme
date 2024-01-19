@@ -3627,10 +3627,54 @@ li.default-menu {
 	background: #ed533a;
 }
 
-
+body.page-template.home .wm-competition{
+	padding-top: 0 !important;
+}
 body.page-template.page .wm-competition{
 	padding-top: 15px;
 }
 body.page-template.page .site-content .container.page-container > .row{
 	padding-top: 5px !important;
+}
+
+
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	#header-meta{
+		position: absolute;
+		top: 25px;
+		right: 20px;
+		height: auto !important;
+	}
+	#header-meta .wpml-ls-legacy-dropdown .wpml-ls-flag{
+		margin: 0;
+	}
+	nav#site-navigation{
+		margin-top: 75px;
+	}
+	#header-logo-image a{
+		top: 10px !important;
+		left: 10px;
+		width: 100% !important;
+		max-width: 120px;
+	}
+	.footer-widgets-area .tg-one-half{
+		width: 100% !important;
+	}
+	#content .post, #content .page{
+		padding: 0 !important;
+	}
+}
+@media (max-width: 576px) {
+
+}
+/* Landscape phones and smaller */
+@media (max-width: 390px) {
+	#header-logo-image a{
+		max-width: 100px;
+	}
+	.inner-wrap{
+		max-width: 94% !important;
+	}
 }
