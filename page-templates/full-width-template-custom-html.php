@@ -238,14 +238,14 @@ foreach ($favLeaguesArray as $favLeagues) {
                     
 
                     <div class="2h-live-score-frame" style="position:relative;">
-                        <div class="24hscore-ads" style="
+                        <a class="24hscore-ads" style="
                         width: 100%;
                         height: 50px;
                         background: #666666;
                         position: absolute;
                         background-image: url(https://24hscore.com/wp-content/uploads/2023/12/1xbet-banner.jpg);
                         background-size: contain;
-                        "></div>
+                        " href="https://www.24hscore.com/bookmaker/go/1xbet"></a>
                         <?php echo get_field('custom-html-main', get_the_ID()) ?>
                     </div>
                 </div>
